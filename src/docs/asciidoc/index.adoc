@@ -1,0 +1,174 @@
+= Introduction to Processing
+(And a few other things)
+2019-05-27
+:revnumber: {project-version}
+ifndef::imagesdir[:imagesdir: images]
+ifndef::sourcedir[:sourcedir: ../../main/java]
+:icons: font
+
+== Agenda
+
+* Basics needed for a demo
+* Processing
+* Rocket & Moonlander
+* General tips
+
+== Demo basics
+
+[%step]
+* Graphics
+* Music
+* Graphics usually in sync with music
+* Last few minutes (~ 1-4)
++
+NOTE: These vary depending competition rules and categories
+
+
+== Processing
+* https://processing.org/ "Processing is a flexible software sketchbook and a language for learning how to code within the context of the visual arts."
+* Free & Open source
+* Works on major PC platforms
+
+== Processing Basics
+//TODO maybe a picture of the UI here?
+
+* IDE-like environment for writing/compiling/running sketches
+* Has own simple Java-ish programming language
+** Processing internally transforms/compiles/runs it as Java code
+* Good references and examples https://processing.org/reference/
+
+== Sketch structure
+
+[source, java]
+----
+
+//Global variables here
+
+void settings() {
+	// used if parameters used for size function
+}
+
+void setup() {
+	// one-time setup called at the start
+}
+
+void draw() {
+	// called repeatedly, draw one frame
+}
+----
+
+== global variables
+* Imports go before these (e.g. `import moonlander.library.*;`)
+* Useful for constants
+* Used when a variable needed in both setup and draw
+
+
+== settings function
+* New in Processing 3.x
+* Used if using variables for the size() function parameters
+
+[source, java]
+----
+// These control how big the opened window is.
+// Before you release your demo, set these to 
+// full HD resolution (1920x1080).
+int CANVAS_WIDTH = 480;
+int CANVAS_HEIGHT = 360;
+
+void settings(){
+	size(CANVAS_WIDTH, CANVAS_HEIGHT, P2D );
+}
+----
+
+== setup function
+* Called once per sketch before draw
+* Used to initialize systems
+** Setup fps, Moonlander etc. (explained later)
+
+[source, java]
+----
+void setup(){
+	frameRate(60);
+	...
+	moonlander = Moonlander.initWithSoundtrack(...);
+	moonlander.start();
+}
+----
+
+== draw function
+* Draw one frame to the screen
+* Normally the first line clear the screen
+** Can be left out for interesting effects
+
+[source, java]
+----
+void draw(){
+	background(0);
+	moonlander.update(); //needs to be called every frame
+	...
+}
+----
+
+== Rocket
+
+[%step]
+* General problem: How to sync music into graphics?
+* Solution: Make demo as a function of time and use a tracker
+* -> Rocket https://github.com/rocket/rocket
+* Integration to Processing done via Moonlander library https://github.com/anttihirvonen/moonlander
+
+
+== Rocket
+
+[%step]
+* Live editing numeric values for variables at time instants
+* Can move forward and backwards in time while running
+* Define interpolations between defined values
+* Read values to Processing via Moonlander
+* Configuration can be saved as a file to be run without Rocket
+
+== Installing moonlander
+* First install Minim dependency
+** Sketch -> Import Library -> Add Library
+* Download Moonlander and unzip to your Sketchbook location
+** File -> Preferences "Sketchbook location"
+** (libraries subfolder, next to minim folder)
+
+== Music
+* Use music that you have created yourself or have a license/permission to use
+* Making it yourself will give you more control, but the learning workload might be outside the scope of the event
+* In both cases, you'll need the tempo BPM number (Beats Per Minute) for Moonlander
+
+== Music cont'd
+* For free music Google "Royalty free music" and/or "Creative Commons music"
+* Check the license and make required attributions
+
+NOTE: In practice choose something that is Creative Commons (CC) and mention in the credits
+
+WARNING: Do not use CC-ND (Creative Commons "No Derivates")
+
+== Music - List of sites
+* https://incompetech.com/music/royalty-free/music.html
+* http://freemusicarchive.org
+
+== Tips
+
+[%step]
+* Start at http://www.graffathon.fi/2018/getting-started/
+* Use version control (e.g. Git), or at least backups
+* Make something you can submit first, improve later
+* Doublecheck the final version is correct one
+* Have fun :)
+
+== Tips - extra
+* Code everything as function of time
+* Code everything resolution independent
+* Needs to look good only on compo machine
+* Effects can be short and can be repeated
+
+== Tips - extra2
+* Libraries 
+** PeasyCam
+** QueasyCam
+
+

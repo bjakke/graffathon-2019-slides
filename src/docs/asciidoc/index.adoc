@@ -19,52 +19,35 @@ ifndef::sourcedir[:sourcedir: ../../main/java]
 * Graphics
 * Music
 * Graphics usually in sync with music
-* Last few minutes (~ 1-4)
+* Last few minutes
 +
 NOTE: These vary depending competition rules and categories
 
-
 == Processing
+
 * https://processing.org/ "Processing is a flexible software sketchbook and a language for learning how to code within the context of the visual arts."
 * Free & Open source
 * Works on major PC platforms
 
 == Processing Basics
-//TODO maybe a picture of the UI here?
 
-* IDE-like environment for writing/compiling/running sketches
-* Has own simple Java-ish programming language
-** Processing internally transforms/compiles/runs it as Java code
+* IDE-like environment for writing, compiling and running sketches
+* Has it's own simple programming language
+** Internally transformed and run as Java code
 * Good references and examples https://processing.org/reference/
 
-== Sketch structure
+== Sketch Structure
 
-[source, java]
-----
+image::intro_to_processing_sketch_structure.jpg[]
 
-//Global variables here
-
-void settings() {
-	// used if parameters used for size function
-}
-
-void setup() {
-	// one-time setup called at the start
-}
-
-void draw() {
-	// called repeatedly, draw one frame
-}
-----
-
-== global variables
+== Global Variables
 * Imports go before these (e.g. `import moonlander.library.*;`)
 * Useful for constants
 * Used when a variable needed in both setup and draw
 
 
-== settings function
-* New in Processing 3.x
+== Settings Function
+* Can be mostly ignored
 * Used if using variables for the size() function parameters
 
 [source, java]
@@ -83,7 +66,9 @@ void settings(){
 == setup function
 * Called once per sketch before draw
 * Used to initialize systems
-** Setup fps, Moonlander etc. (explained later)
+** Size and render mode of the screen
+** Target framerate
+** Moonlander (explained later)
 
 [source, java]
 ----
@@ -99,6 +84,7 @@ void setup(){
 * Draw one frame to the screen
 * Normally the first line clear the screen
 ** Can be left out for interesting effects
+* Moonlander update() method must be called
 
 [source, java]
 ----
@@ -117,12 +103,15 @@ void draw(){
 * -> Rocket https://github.com/rocket/rocket
 * Integration to Processing done via Moonlander library https://github.com/anttihirvonen/moonlander
 
+== Rocket
+image::rocket_example.jpg[]
 
 == Rocket
 
 [%step]
+* Keyboard-based editor
 * Live editing numeric values for variables at time instants
-* Can move forward and backwards in time while running
+* Can move forward and backwards in time while sketch is running
 * Define interpolations between defined values
 * Read values to Processing via Moonlander
 * Configuration can be saved as a file to be run without Rocket
@@ -165,6 +154,7 @@ WARNING: Do not use CC-ND (Creative Commons "No Derivates")
 * Code everything resolution independent
 * Needs to look good only on compo machine
 * Effects can be short and can be repeated
+* Use a "scene" variable in rocket for pacing
 
 == Tips - extra2
 * Libraries 

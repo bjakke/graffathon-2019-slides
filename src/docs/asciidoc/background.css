@@ -1,0 +1,6 @@
+body {
+  background-image: url('images/graffathon-2019-logo.svg'), url('images/dot_logo_transp_white.png');
+  background-repeat: no-repeat;
+  background-position: bottom left, bottom right;
+  background-size: auto 8%, auto 8%;
+  }

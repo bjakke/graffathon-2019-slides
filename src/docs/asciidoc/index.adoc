@@ -8,6 +8,7 @@ ifndef::sourcedir[:sourcedir: ../../main/java]
 
 == Agenda
 
+[%step]
 * Basics needed for a demo
 * Processing
 * Rocket & Moonlander
@@ -31,10 +32,10 @@ NOTE: These vary depending competition rules and categories
 
 == Processing Basics
 
-* IDE-like environment for writing, compiling and running sketches
+* Integrated development environment for writing, compiling and running sketches
 * Has it's own simple programming language
 ** Internally transformed and run as Java code
-* Good references and examples https://processing.org/reference/
+* Good tutorials, examples and reference (https://processing.org/reference/)
 
 == Sketch Structure
 
@@ -43,7 +44,7 @@ image::intro_to_processing_sketch_structure.jpg[]
 == Global Variables
 * Imports go before these (e.g. `import moonlander.library.*;`)
 * Useful for constants
-* Used when a variable needed in both setup and draw
+* Used when a variable needed in both setup() and draw()
 
 
 == Settings Function
@@ -53,8 +54,6 @@ image::intro_to_processing_sketch_structure.jpg[]
 [source, java]
 ----
 // These control how big the opened window is.
-// Before you release your demo, set these to 
-// full HD resolution (1920x1080).
 int CANVAS_WIDTH = 480;
 int CANVAS_HEIGHT = 360;
 
@@ -83,7 +82,7 @@ void setup(){
 == draw function
 * Draw one frame to the screen
 * Normally the first line clear the screen
-** Can be left out for interesting effects
+** (But can be left out for interesting effects)
 * Moonlander update() method must be called
 
 [source, java]
@@ -109,7 +108,6 @@ image::rocket_example.jpg[]
 == Rocket
 
 [%step]
-* Keyboard-based editor
 * Live editing numeric values for variables at time instants
 * Can move forward and backwards in time while sketch is running
 * Define interpolations between defined values
@@ -130,20 +128,16 @@ image::rocket_example.jpg[]
 
 == Music cont'd
 * For free music Google "Royalty free music" and/or "Creative Commons music"
+* https://incompetech.com/music/royalty-free/music.html
 * Check the license and make required attributions
 
 NOTE: In practice choose something that is Creative Commons (CC) and mention in the credits
 
 WARNING: Do not use CC-ND (Creative Commons "No Derivates")
 
-== Music - List of sites
-* https://incompetech.com/music/royalty-free/music.html
-* http://freemusicarchive.org
-
 == Tips
 
-[%step]
-* Start at http://www.graffathon.fi/2018/getting-started/
+* Start at http://www.graffathon.fi/2019/getting-started/
 * Use version control (e.g. Git), or at least backups
 * Make something you can submit first, improve later
 * Doublecheck the final version is correct one
@@ -152,7 +146,7 @@ WARNING: Do not use CC-ND (Creative Commons "No Derivates")
 == Tips - extra
 * Code everything as function of time
 * Code everything resolution independent
-* Needs to look good only on compo machine
+* Only needs to look good on the compo machine
 * Effects can be short and can be repeated
 * Use a "scene" variable in rocket for pacing
 

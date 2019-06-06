@@ -6,6 +6,7 @@ ifndef::imagesdir[:imagesdir: images]
 ifndef::sourcedir[:sourcedir: ../../main/java]
 :icons: font
 :customcss: background.css
+:revealjs_controls: false
 == Agenda
 
 [%step]

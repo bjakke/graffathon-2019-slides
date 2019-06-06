@@ -41,7 +41,7 @@ NOTE: These vary depending competition rules and categories
 
 == Sketch Structure
 
-image::intro_to_processing_sketch_structure.jpg[]
+image::intro_to_processing_sketch_structure.jpg[height=400]
 
 == Global Variables
 * Imports go before these (e.g. `import moonlander.library.*;`)
@@ -67,15 +67,16 @@ void settings(){
 == setup function
 * Called once per sketch before draw
 * Used to initialize systems
-** Size and render mode of the screen
-** Target framerate
-** Moonlander (explained later)
 
 [source, java]
 ----
 void setup(){
-	frameRate(60);
-	...
+	size(480, 360, P2D); // Size and render mode 
+	// OR
+	fullScreen(P2D); // (use this for compo entry)
+	frameRate(60); // Target framerate
+	... //other initializations
+	// Moonlander init, to a global variable
 	moonlander = Moonlander.initWithSoundtrack(...);
 	moonlander.start();
 }
@@ -129,13 +130,10 @@ image::rocket_example.jpg[]
 * In both cases, you'll need the tempo BPM number (Beats Per Minute) for Moonlander
 
 == Music cont'd
-* For free music Google "Royalty free music" and/or "Creative Commons music"
-* https://incompetech.com/music/royalty-free/music.html
+* For free music Google "Royalty free music" and/or "Creative Commons music", or https://incompetech.com/music/royalty-free/music.html
 * Check the license and make required attributions
 
-NOTE: In practice choose something that is Creative Commons (CC) and mention in the credits
-
-WARNING: Do not use CC-ND (Creative Commons "No Derivates")
+NOTE: In practice choose something that is Creative Commons (CC) and mention in the credits, however do not use CC-ND (Creative Commons "No Derivates")
 
 == Tips
 

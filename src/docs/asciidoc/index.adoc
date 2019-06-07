@@ -15,7 +15,11 @@ ifndef::sourcedir[:sourcedir: ../../main/java]
 * Rocket & Moonlander
 * General tips
 
-[background-image=background.png, background-size=contain]
+== Demo example
+
+// https://www.youtube.com/watch?v=jB0vBmiTr6o
+video::jB0vBmiTr6o[youtube, start=0]
+
 == Demo basics
 
 [%step]
@@ -25,6 +29,26 @@ ifndef::sourcedir[:sourcedir: ../../main/java]
 * Last few minutes
 +
 NOTE: These vary depending competition rules and categories
+
+== Demo example
+
+// https://www.youtube.com/watch?v=xopNUa4n-o4
+video::xopNUa4n-o4[youtube, start=0]
+
+== Demoscene history
+
+[%step]
+* Started in copyparties back in the days
+* People started to make 'intros' to copies left over space
+* Eventually the idea of making real-time computer grapchics separated as it's own art
+* Size-limited compos, e.g. 4k intro + full no-size limits categories
+
+
+== Demo example
+
+// https://www.youtube.com/watch?v=6auLYCNHtdw
+video::6auLYCNHtdw[youtube, start=0]
+
 
 == Processing
 

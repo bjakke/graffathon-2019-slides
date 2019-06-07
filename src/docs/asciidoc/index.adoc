@@ -17,8 +17,8 @@ ifndef::sourcedir[:sourcedir: ../../main/java]
 
 == Demo example
 
-// https://www.youtube.com/watch?v=jB0vBmiTr6o
-video::jB0vBmiTr6o[youtube, start=0]
+// https://www.youtube.com/watch?v=TaEoAJw_0Zc
+video::TaEoAJw_0Zc[youtube, start=0]
 
 == Demo basics
 
